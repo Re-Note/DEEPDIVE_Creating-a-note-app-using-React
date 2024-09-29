@@ -1,20 +1,17 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import './App.css'
-import { CreateNoteModal, TagsModal } from './components'
-import { useAppSelector } from './hooks/redux'
-import { Navbar, Sidebar } from './layout'
-import { AllNotes, ArchiveNotes, ErrorPage, TagNotes, TrashNotes } from './pages'
-import 'react-toastify/dist/ReactToastify.css'
-
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'; // HashRouter로 변경
+import { ToastContainer } from 'react-toastify';
+import './App.css';
+import { CreateNoteModal, TagsModal } from './components';
+import { useAppSelector } from './hooks/redux';
+import { Navbar, Sidebar } from './layout';
+import { AllNotes, ArchiveNotes, ErrorPage, TagNotes, TrashNotes } from './pages';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-
-  const { viewEditTagsModal, viewCreateNoteModal } = useAppSelector(state => state.modal);
+  const { viewEditTagsModal, viewCreateNoteModal } = useAppSelector((state) => state.modal);
 
   return (
     <div className="app">
-
       {viewCreateNoteModal && <CreateNoteModal />}
       {viewEditTagsModal && <TagsModal type='edit' />}
 
@@ -25,7 +22,8 @@ function App() {
         autoClose={1500}
       />
 
-      <BrowserRouter>
+      {/* BrowserRouter를 HashRouter로 변경 */}
+      <HashRouter>
         <Sidebar />
         <div className='app__container'>
           <Navbar /> 
@@ -38,9 +36,9 @@ function App() {
             <Route path='/*' element={<Navigate to={"/404"} />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
