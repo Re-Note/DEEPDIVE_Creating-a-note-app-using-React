@@ -8,6 +8,8 @@
 
 ### [구현 결과 이미지]
 
+![사진](https://github.com/user-attachments/assets/d34e39ca-205c-4f91-bd17-6cf4244bdbb6)
+
 ### [구현 결과 사이트 주소]
 
 https://re-note.github.io/DEEPDIVE_Creating-a-note-app-using-React/
