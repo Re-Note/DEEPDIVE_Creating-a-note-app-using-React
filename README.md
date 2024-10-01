@@ -10,6 +10,8 @@
 
 ### [구현 결과 사이트 주소]
 
+https://re-note.github.io/DEEPDIVE_Creating-a-note-app-using-React/
+
 ---
 
 ### [추가 구현 요구 사항]
